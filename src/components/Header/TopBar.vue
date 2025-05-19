@@ -216,7 +216,7 @@ function selectCity(name: string) {
 
 .login-button {
   padding: 6px 12px;
-  background-color: #007bffd5;
+  background-color: #007bffab;
   border: none;
   color: white;
   border-radius: 6px;

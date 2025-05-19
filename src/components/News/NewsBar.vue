@@ -32,11 +32,13 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
+import image_1 from '@/assets/News/image.png'
 
 const visible = ref(true)
 
 const newsList = ref([
-  { title: 'Новость 1', description: 'Описание новости 1', image: '/news1.jpg' },
+  { title: 'Мобильная версия', description: 'На данный момент мы ведем работы по разработке мобильной версии, \
+                                                все лучшее впереди, ждите с нетерпеньем.', image: image_1},
   { title: 'Новость 2', description: 'Описание новости 2', image: '/news2.jpg' },
   { title: 'Новость 3', description: 'Описание новости 3', image: '/news3.jpg' }
 ])
@@ -54,7 +56,7 @@ const prevSlide = () => {
 }
 
 onMounted(() => {
-  interval = setInterval(nextSlide, 8000)
+  interval = setInterval(nextSlide, 50000)
 })
 onBeforeUnmount(() => {
   clearInterval(interval)
@@ -91,7 +93,7 @@ onBeforeUnmount(() => {
 
 .news-bar {
   background: #fff;
-  padding: 50px 0;
+  padding: 25px 0;
   position: relative;
   z-index: 5;
 }
@@ -124,7 +126,6 @@ onBeforeUnmount(() => {
   background: rgba(0, 0, 0, 0.342);
   width: 100%;
   color: white;
-  padding: 12px;
   text-align: center;
   border-radius: 0 0 12px 12px;
 }
@@ -152,11 +153,11 @@ onBeforeUnmount(() => {
 }
 
 .arrow.left {
-  left: -30px;
+  left: -10%;
 }
 
 .arrow.right {
-  right: -30px;
+  right: -15px;
 }
 
 .dots {
@@ -176,7 +177,7 @@ onBeforeUnmount(() => {
 }
 
 .dot.active {
-  background-color: #0099ff;
+  background-color: #007bffab;
 }
 
 </style>
