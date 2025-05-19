@@ -1,10 +1,10 @@
 <template>
   <nav class="bottom-bar">
     <ul>
-      <li><a href="#">Главная</a></li>
-      <li><a href="#">Категории</a></li>
-      <li><a href="#">Акции</a></li>
+      <li><a href="#">Магазин</a></li>
+      <li><a href="#" @click.prevent="$emit('toggle-news')">Новости</a></li>
       <li><a href="#">Контакты</a></li>
+      <li><a href="#">О нас</a></li>
     </ul>
   </nav>
 </template>
@@ -16,6 +16,9 @@
 .bottom-bar {
   background-color: #f9f9f9;
   padding: 8px 24px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  position: relative;
 }
 
 .bottom-bar ul {
@@ -29,10 +32,11 @@
 
 .bottom-bar a {
   text-decoration: none;
-  color: #333;
+  color: #333333c7;
 }
 
 .bottom-bar a:hover {
+  color: #333333;
   text-decoration: underline;
 }
 </style>
